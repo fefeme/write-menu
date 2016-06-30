@@ -31,11 +31,10 @@ If the number of entries doesn't fit on the screen, you can scroll through the p
 
 ![Demo](https://github.com/fefeme/write-menu/blob/develop/demo_pagination.gif)
 
+## Planned features
 
-
-
-
-
-
-
-
+- Add help
+- Make it into a module
+- Add multiple selection
+- Add endless scroll (as an alternative to pagination)
+- Pester Tests. Why not.
