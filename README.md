@@ -1,10 +1,9 @@
 # write-menu
-Powershell CHUI Menu
 
-## Why?
+## Powershell CHUI Menu
 
 I tried a couple of other chui menu solutions for the powershell- but none of them really worked with the pipeline.
-So i created ANOTHER one. *Sigh*. This one fits my needs- but it's not yet fully tested. 
+So I created ANOTHER one. *Sigh*. This one fits my needs- but it's not yet fully tested. 
 
 ## Usage
 
@@ -32,7 +31,7 @@ If the number of entries doesn't fit on the screen, you can scroll through the p
 
 ## Installation
 
-For now, i just added the script to a module i load through powershell profile. If you want to try it out, just source it:
+For now, i just added the script to a module I load with a powershell profile. If you want to try it out, just source it:
 
 ```powershell
 . .\write-menu.ps1
