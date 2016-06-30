@@ -27,7 +27,11 @@ berlin pub, hopfenreich:
 
 ## Pagination
 
-If the number of entries doesn't fit on the screen, you can scroll through the pages using left and right arrow.
+If the number of entries doesn't fit on the screen, you can scroll through the pages using the left and right arrow key:
+
+![Demo](https://github.com/fefeme/write-menu/blob/develop/demo_pagination.gif)
+
+
 
 
 
