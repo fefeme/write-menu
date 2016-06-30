@@ -11,7 +11,7 @@ Powershell CHUI Menu
 
 ## Demo
 
-[[https://github.com/fefeme/write-menu/blob/master/demo.gif|alt=Demo]]
+![Demo]([https://github.com/fefeme/write-menu/blob/master/demo.gif)
 
 
 
