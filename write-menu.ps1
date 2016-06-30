@@ -4,7 +4,8 @@
         [parameter(valueFromPipeline=$true)][object[]]$Items,
         [parameter()][string]$Property,
         [parameter()][int32]$PageSize,
-        [parameter()][string]$Title
+        [parameter()][string]$Title,
+        [parameter()][switch]$Scroll
         
     )    
     begin {
@@ -30,8 +31,6 @@
 
             foreach ($MenuItem in $Page.Items){
                 [System.Console]::SetCursorPosition(2, $Pos) 
-                [System.Console]::ForegroundColor = $ColorFG
-                [System.Console]::BackgroundColor = $ColorBG
 
                 if ($MenuItem -eq $Selected) {
                     [System.Console]::ForegroundColor = $ColorFGSelected
@@ -44,6 +43,8 @@
                 else {
                     [System.Console]::Write($MenuItem)
                 }
+                [System.Console]::ForegroundColor = $ColorFG
+                [System.Console]::BackgroundColor = $ColorBG
 
                 $Pos++
             }
@@ -74,10 +75,6 @@
             $Top = 3
             $Offset = 7
         }
-
-        if ($PageSize -eq 0){
-            $PageSize = $Host.UI.RawUI.WindowSize.Height - $Offset
-        }
         
     }
 
@@ -87,6 +84,15 @@
 
     end{
         [System.Console]::CursorVisible = $false
+
+        $MenuItems = ($MenuItems | Sort -Unique) 
+
+        if ($PageSize -eq 0){
+            if ($Scrollable) {
+                $PageSize = $MenuItems.Length
+            }
+            $PageSize = $Host.UI.RawUI.WindowSize.Height - $Offset
+        }
         
         $CurrentPage = 1
         $Index = 0
